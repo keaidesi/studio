@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: #fff; color: #1a1a1a; -webkit-tap-highlight-color: transparent; }
+
+/* 导航 */
+header {
+  position: fixed; top: 0; width: 100%; height: 100px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  padding: 30px 4%; background: transparent; z-index: 1000;
+}
+.nav-group { display: flex; flex-direction: column; }
+.nav-label { font-size: 9px; color: #aaa; margin-bottom: 6px; }
+.nav-content { font-size: 11px; }
+.brand { font-size: 18px; font-weight: bold; }
+
+/* Banner 修正：去除冗余设计 */
+.home-banner {
+  width: 100%; height: 75vh; background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+
+/* 主内容 */
+.content-wrapper { padding: 80px 10%; transition: all 0.5s ease; }
+.work-card { margin-bottom: 120px; cursor: pointer; }
+.landscape .img-placeholder { aspect-ratio: 16/9; }
+.portrait .img-placeholder { aspect-ratio: 3/4; width: 70%; margin: 0 auto; }
+.img-placeholder { width: 100%; background: #eee; cursor: pointer; }
+.work-meta { margin-top: 15px; font-size: 10px; color: #999; letter-spacing: 1px; }
+
+/* 一级分页修复：底部滑出 4/5 */
+.drawer-l1 {
+  position: fixed; left: 0; bottom: 0; width: 100%; height: 80vh;
+  background: #fff; z-index: 2000; padding: 50px;
+  /* 初始隐藏在下方 */
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s ease;
+  border-radius: 24px 24px 0 0; box-shadow: 0 -10px 40px rgba(0,0,0,0.06);
+  overflow-y: auto; pointer-events: auto; /* 关键：确保可点击 */
+}
+.drawer-l1.open { transform: translateY(0); } /* 滑出 80% 高度 */
+
+/* 向上滑时撑满全屏 */
+.drawer-l1.full-height { height: 100vh; border-radius: 0; }
+
+/* 二级全屏预览 */
+.drawer-l2 {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: #fff; z-index: 4000; visibility: hidden; opacity: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.4s ease;
+}
+.drawer-l2.open { visibility: visible; opacity: 1; }
+
+/* 遮罩与交互 */
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.1); opacity: 0; visibility: hidden; transition: 0.4s; }
+#overlay1 { z-index: 1500; }
+#overlay2 { z-index: 3500; }
+.overlay.active { opacity: 1; visibility: visible; }
+
+.nav-arrow { position: absolute; top: 50%; font-size: 30px; color: #ccc; cursor: pointer; padding: 20px; z-index: 4100; }
+.prev { left: 5%; } .next { right: 5%; }
+.close-l2 { position: absolute; bottom: 40px; font-size: 10px; color: #aaa; cursor: pointer; text-decoration: underline; }
+.drawer-header { display: flex; justify-content: space-between; margin-bottom: 40px; }
+.close-icon { cursor: pointer; color: #aaa; font-size: 10px; }
