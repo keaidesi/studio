@@ -1,5 +1,5 @@
 const PROJECT_DATA = [
-  { title: 'Project 01', cover: './images/p1_cover.JPG', details: ['./images/p1_1.JPG', './images/p1_2.JPG'], date: 'WORKS 01 / 2026' },
+  { title: 'Project 01', cover: './images/p1_cover.JPG', details: ['./images/p1_1.JPG', './images/p1_2.JPG', './images/p1_3.JPG', './images/p1_4.JPG', './images/p1_5.JPG', './images/p1_6.JPG', './images/p1_7.JPG], date: 'WORKS 01 / 2026' },
   { title: 'Project 02', cover: './images/p2_cover.JPG', details: ['./images/p2_1.JPG'], date: 'WORKS 02 / 2026' },
   { title: 'Project 03', cover: './images/p3_cover.JPG', details: ['./images/p3_1.JPG'], date: 'WORKS 03 / 2026' },
   { title: 'Project 04', cover: './images/p4_cover.JPG', details: ['./images/p4_1.JPG'], date: 'WORKS 04 / 2026' },
