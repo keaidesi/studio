@@ -106,3 +106,38 @@ body {
   .content-wrapper { margin-left: 0; margin-top: 120px; padding: 20px; }
   .gallery-thumb { height: 120px; }
 }
+/* 手机端导航调整 */
+@media (max-width: 768px) {
+  /* 让导航回到文档流，排在 banner 下方，不再悬浮盖住作品 */
+  .side-nav {
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    margin-top: 180px; /* 避开固定的顶部 banner */
+    padding: 20px 50px;
+    flex-direction: row; /* 关键：改为横向排列 */
+    justify-content: flex-start;
+    gap: 30px; /* 缩短三个组之间的间距 */
+  }
+
+  /* 调整作品容器的上边距，因为它现在跟着导航走 */
+  .content-wrapper {
+    margin-top: 0; 
+    margin-left: 0;
+    padding: 20px 50px;
+  }
+
+  /* 缩小导航组内的间距，适合横排显示 */
+  .nav-group {
+    gap: 5px;
+  }
+
+  /* 如果觉得三列作品太挤，可以保持两列；如果想在手机上也横排三列，可以取消下面注释 */
+  /*
+  #mainContent {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 15px;
+  }
+  */
+}
