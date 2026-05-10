@@ -9,7 +9,7 @@ const PROJECT_DATA = [
   { title: 'Project 08', cover: './images/p8_cover.JPG', details: ['./images/p8_1.JPG'], date: 'WORKS 08 / 2026' },
   { title: 'Project 09', cover: './images/p9_cover.JPG', details: ['./images/p9_1.JPG'], date: 'WORKS 09 / 2026' },
   { title: 'Project 10', cover: './images/p10_cover.JPG', details: ['./images/p10_1.JPG', './images/p10_2.JPG', './images/p10_3.JPG', './images/p10_4.JPG', './images/p10_5.JPG', './images/p10_6.JPG', './images/p10_7.JPG', './images/p10_8.GIF', './images/p10_9.JPG', './images/p10_10.GIF', './images/p10_11.GIF', './images/p10_12.GIF', './images/p10_13.GIF', './images/p10_14.GIF'], date: 'WORKS 10 / 2026' },
-  { title: 'Project 11', cover: './images/p11_cover.JPG', details: ['./images/p11_1.JPG'], date: 'WORKS 11 / 2026' },
+  { title: 'Project 11', cover: './images/p11_cover.JPG', details: ['./images/p11_1.JPG', './images/p10_2.JPG', './images/p11_3.JPG', './images/p11_4.JPG', './images/p11_5.JPG'], date: 'WORKS 11 / 2026' },
   { title: 'Project 12', cover: './images/p12_cover.JPG', details: ['./images/p12_1.JPG'], date: 'WORKS 12 / 2026' }
 ];
 
